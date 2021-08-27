@@ -2,7 +2,6 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
-#include <limits.h>
 
 const int ITERATION_EXPONENT_START = 3;
 const int ITERATION_EXPONENT_END = 5;
