@@ -46,6 +46,7 @@ int main()
     struct Trade trade = find_optimal_stock_trade(g_Stock, g_StockLen);
     printf("n^2: Optimal buy and sell day: (%d, %d)\n", trade.buyIndex + 1, trade.sellIndex + 1);
 
+    printf("\n### Performance measurement ###\n");
     for (int n = ITERATION_EXPONENT_START; n <= ITERATION_EXPONENT_END; n++)
     {
         // Generate a random array with 10^n values
@@ -74,7 +75,7 @@ int main()
         // Print out the time.
         int ms = (end.tv_sec - start.tv_sec) * 1000 + (end.tv_nsec - start.tv_nsec) / 1000000;
         printf("%d iterations took %dms\n", len, ms);
-        printf("Buy: %d, sell: %d\n", trade.buyIndex + 1, trade.sellIndex + 1);
+        printf("Buy: %d, sell: %d\n\n", trade.buyIndex + 1, trade.sellIndex + 1);
 
         free(stock);
     }
